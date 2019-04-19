@@ -12,6 +12,7 @@
 		C4529C252269E0760051C2B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4529C232269E0760051C2B6 /* Main.storyboard */; };
 		C4529C272269E0790051C2B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4529C262269E0790051C2B6 /* Assets.xcassets */; };
 		C4529C2A2269E0790051C2B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4529C282269E0790051C2B6 /* LaunchScreen.storyboard */; };
+		C4529C332269E1120051C2B6 /* GravityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4529C322269E1120051C2B6 /* GravityViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		C4529C262269E0790051C2B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4529C292269E0790051C2B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4529C2B2269E0790051C2B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4529C322269E1120051C2B6 /* GravityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GravityViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,8 @@
 		C4529C1E2269E0760051C2B6 /* DynamicAnimationsExample */ = {
 			isa = PBXGroup;
 			children = (
+				C4529C342269F4300051C2B6 /* Views */,
+				C4529C312269E08A0051C2B6 /* Examples */,
 				C4529C1F2269E0760051C2B6 /* AppDelegate.swift */,
 				C4529C212269E0760051C2B6 /* ViewController.swift */,
 				C4529C232269E0760051C2B6 /* Main.storyboard */,
@@ -62,6 +66,21 @@
 				C4529C2B2269E0790051C2B6 /* Info.plist */,
 			);
 			path = DynamicAnimationsExample;
+			sourceTree = "<group>";
+		};
+		C4529C312269E08A0051C2B6 /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				C4529C322269E1120051C2B6 /* GravityViewController.swift */,
+			);
+			path = Examples;
+			sourceTree = "<group>";
+		};
+		C4529C342269F4300051C2B6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +156,7 @@
 			files = (
 				C4529C222269E0760051C2B6 /* ViewController.swift in Sources */,
 				C4529C202269E0760051C2B6 /* AppDelegate.swift in Sources */,
+				C4529C332269E1120051C2B6 /* GravityViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
