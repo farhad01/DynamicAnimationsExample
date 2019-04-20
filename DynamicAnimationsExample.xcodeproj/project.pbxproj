@@ -13,6 +13,14 @@
 		C4529C272269E0790051C2B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4529C262269E0790051C2B6 /* Assets.xcassets */; };
 		C4529C2A2269E0790051C2B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4529C282269E0790051C2B6 /* LaunchScreen.storyboard */; };
 		C4529C332269E1120051C2B6 /* GravityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4529C322269E1120051C2B6 /* GravityViewController.swift */; };
+		C4529C362269F4930051C2B6 /* FanBlade.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4529C352269F4930051C2B6 /* FanBlade.swift */; };
+		C4529C382269F6BF0051C2B6 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4529C372269F6BF0051C2B6 /* Utils.swift */; };
+		C461234B226B0D40005BD207 /* AttachmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C461234A226B0D40005BD207 /* AttachmentViewController.swift */; };
+		C461234D226B35BF005BD207 /* FAPopupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C461234C226B35BF005BD207 /* FAPopupController.swift */; };
+		C461234F226B67CA005BD207 /* PopupIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C461234E226B67CA005BD207 /* PopupIndicatorView.swift */; };
+		C4612351226B8217005BD207 /* CodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4612350226B8217005BD207 /* CodeViewController.swift */; };
+		C4CE1D89226A2EEE00578B5D /* BorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CE1D88226A2EEE00578B5D /* BorderButton.swift */; };
+		C4CE1D8B226A360B00578B5D /* RotationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CE1D8A226A360B00578B5D /* RotationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +32,14 @@
 		C4529C292269E0790051C2B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4529C2B2269E0790051C2B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4529C322269E1120051C2B6 /* GravityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GravityViewController.swift; sourceTree = "<group>"; };
+		C4529C352269F4930051C2B6 /* FanBlade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FanBlade.swift; sourceTree = "<group>"; };
+		C4529C372269F6BF0051C2B6 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		C461234A226B0D40005BD207 /* AttachmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachmentViewController.swift; sourceTree = "<group>"; };
+		C461234C226B35BF005BD207 /* FAPopupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAPopupController.swift; sourceTree = "<group>"; };
+		C461234E226B67CA005BD207 /* PopupIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupIndicatorView.swift; sourceTree = "<group>"; };
+		C4612350226B8217005BD207 /* CodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewController.swift; sourceTree = "<group>"; };
+		C4CE1D88226A2EEE00578B5D /* BorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderButton.swift; sourceTree = "<group>"; };
+		C4CE1D8A226A360B00578B5D /* RotationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +76,12 @@
 				C4529C312269E08A0051C2B6 /* Examples */,
 				C4529C1F2269E0760051C2B6 /* AppDelegate.swift */,
 				C4529C212269E0760051C2B6 /* ViewController.swift */,
+				C4612350226B8217005BD207 /* CodeViewController.swift */,
 				C4529C232269E0760051C2B6 /* Main.storyboard */,
 				C4529C262269E0790051C2B6 /* Assets.xcassets */,
 				C4529C282269E0790051C2B6 /* LaunchScreen.storyboard */,
 				C4529C2B2269E0790051C2B6 /* Info.plist */,
+				C4529C372269F6BF0051C2B6 /* Utils.swift */,
 			);
 			path = DynamicAnimationsExample;
 			sourceTree = "<group>";
@@ -72,6 +90,9 @@
 			isa = PBXGroup;
 			children = (
 				C4529C322269E1120051C2B6 /* GravityViewController.swift */,
+				C4CE1D8A226A360B00578B5D /* RotationViewController.swift */,
+				C461234A226B0D40005BD207 /* AttachmentViewController.swift */,
+				C461234C226B35BF005BD207 /* FAPopupController.swift */,
 			);
 			path = Examples;
 			sourceTree = "<group>";
@@ -79,6 +100,9 @@
 		C4529C342269F4300051C2B6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C4529C352269F4930051C2B6 /* FanBlade.swift */,
+				C4CE1D88226A2EEE00578B5D /* BorderButton.swift */,
+				C461234E226B67CA005BD207 /* PopupIndicatorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -154,9 +178,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4529C382269F6BF0051C2B6 /* Utils.swift in Sources */,
 				C4529C222269E0760051C2B6 /* ViewController.swift in Sources */,
+				C461234B226B0D40005BD207 /* AttachmentViewController.swift in Sources */,
 				C4529C202269E0760051C2B6 /* AppDelegate.swift in Sources */,
+				C4529C362269F4930051C2B6 /* FanBlade.swift in Sources */,
+				C4CE1D8B226A360B00578B5D /* RotationViewController.swift in Sources */,
 				C4529C332269E1120051C2B6 /* GravityViewController.swift in Sources */,
+				C461234D226B35BF005BD207 /* FAPopupController.swift in Sources */,
+				C4CE1D89226A2EEE00578B5D /* BorderButton.swift in Sources */,
+				C461234F226B67CA005BD207 /* PopupIndicatorView.swift in Sources */,
+				C4612351226B8217005BD207 /* CodeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +337,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3LEWJWUP2S;
 				INFOPLIST_FILE = DynamicAnimationsExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,6 +356,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3LEWJWUP2S;
 				INFOPLIST_FILE = DynamicAnimationsExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -18,14 +18,13 @@ class GravityViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         animator = UIDynamicAnimator(referenceView: view)
-        gravity = UIGravityBehavior(items: [ball])
-        animator.addBehavior(gravity)
         
         collision = UICollisionBehavior(items: [ball])
         collision.translatesReferenceBoundsIntoBoundary = true
         animator.addBehavior(collision)
         
-
+        gravity = UIGravityBehavior(items: [ball])
+        animator.addBehavior(gravity)
         // Do any additional setup after loading the view.
     }
     
