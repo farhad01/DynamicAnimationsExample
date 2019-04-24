@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QEO-dm-Ylc">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,11 +15,11 @@
             <objects>
                 <viewController id="MUe-ZD-8Ad" customClass="CodeViewController" customModule="DynamicAnimationsExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="klp-Oy-kOb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Un6-2u-9iw">
-                                <rect key="frame" x="0.0" y="88" width="414" height="400"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="400"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="TkK-iD-g8D">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
@@ -65,7 +65,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znM-2b-uiN">
-                                <rect key="frame" x="0.0" y="488" width="414" height="374"/>
+                                <rect key="frame" x="0.0" y="464" width="414" height="272"/>
                                 <connections>
                                     <action selector="presenter:" destination="MUe-ZD-8Ad" eventType="touchUpInside" id="12P-wh-cag"/>
                                 </connections>
@@ -96,7 +96,7 @@
             <objects>
                 <tableViewController id="wci-G4-iHd" customClass="ViewController" customModule="DynamicAnimationsExample" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ty3-Rt-6wP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <sections>
@@ -123,7 +123,10 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="84b-oF-hzo" kind="show" id="MnE-Ko-AqV"/>
+                                            <segue destination="84b-oF-hzo" kind="show" id="MnE-Ko-AqV">
+                                                <segue key="commit" inheritsFrom="parent" id="gH2-43-QyJ"/>
+                                                <segue key="preview" inheritsFrom="commit" id="nFM-2V-TX3"/>
+                                            </segue>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Hww-yv-U0f">
@@ -147,7 +150,10 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="41r-Cc-RHa" kind="show" id="7NC-8S-t8a"/>
+                                            <segue destination="41r-Cc-RHa" kind="show" id="7NC-8S-t8a">
+                                                <segue key="commit" inheritsFrom="parent" id="Dec-eS-Esw"/>
+                                                <segue key="preview" inheritsFrom="commit" id="pKa-FE-D26"/>
+                                            </segue>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="cJ2-hL-I7w">
@@ -171,7 +177,10 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="EmO-wh-ghk" kind="show" id="9h3-2O-lFg"/>
+                                            <segue destination="EmO-wh-ghk" kind="show" id="9h3-2O-lFg">
+                                                <segue key="commit" inheritsFrom="parent" id="GVc-6Q-nu2"/>
+                                                <segue key="preview" inheritsFrom="commit" id="9ya-wi-FJl"/>
+                                            </segue>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="L0H-q9-dcl">
@@ -195,7 +204,10 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="Rb6-Yz-sYC" kind="show" id="oMO-9G-ds1"/>
+                                            <segue destination="Rb6-Yz-sYC" kind="show" id="oMO-9G-ds1">
+                                                <segue key="commit" inheritsFrom="parent" id="yky-8Z-OKF"/>
+                                                <segue key="preview" inheritsFrom="commit" id="1WN-eT-JYP"/>
+                                            </segue>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -233,11 +245,11 @@
             <objects>
                 <viewController id="41r-Cc-RHa" customClass="RotationViewController" customModule="DynamicAnimationsExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B7j-h1-rVh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vzc-7Q-oeL" customClass="FanBlade" customModule="DynamicAnimationsExample" customModuleProvider="target">
-                                <rect key="frame" x="117" y="118" width="180" height="180"/>
+                                <rect key="frame" x="117" y="94" width="180" height="180"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="180" id="6Dg-h8-gmq"/>
@@ -245,7 +257,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="4DY-r9-ltD">
-                                <rect key="frame" x="177" y="318" width="60" height="240"/>
+                                <rect key="frame" x="177" y="294" width="60" height="240"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IEZ-bP-Hhg" customClass="BorderButton" customModule="DynamicAnimationsExample" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -309,11 +321,11 @@
             <objects>
                 <viewController id="EmO-wh-ghk" customClass="AttachmentViewController" customModule="DynamicAnimationsExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MhL-Ao-BLM">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="h9C-Hx-od7">
-                                <rect key="frame" x="103" y="455" width="208" height="40"/>
+                                <rect key="frame" x="103" y="380" width="208" height="40"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ball" translatesAutoresizingMaskIntoConstraints="NO" id="bKu-nv-vHZ">
                                         <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
@@ -337,7 +349,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N3l-O3-35u">
-                                <rect key="frame" x="103" y="455" width="208" height="40"/>
+                                <rect key="frame" x="103" y="380" width="208" height="40"/>
                                 <state key="normal" title=" "/>
                                 <connections>
                                     <action selector="pause:" destination="EmO-wh-ghk" eventType="touchUpInside" id="aOo-jN-uq7"/>
@@ -373,14 +385,14 @@
             <objects>
                 <viewController id="Rb6-Yz-sYC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LNz-z4-F3Q">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="huc-Ff-gGB">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S61-ir-Yts">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="-160" width="414" height="736"/>
                                 <connections>
                                     <segue destination="P4D-4l-b8i" kind="embed" id="1To-Rh-eLy"/>
                                 </connections>
@@ -409,18 +421,19 @@
             <objects>
                 <viewController id="84b-oF-hzo" customClass="GravityViewController" customModule="DynamicAnimationsExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ytc-sV-HO3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCn-yH-4Kf">
-                                <rect key="frame" x="0.0" y="562" width="100" height="100"/>
+                                <rect key="frame" x="0.0" y="436" width="100" height="100"/>
+                                <gestureRecognizers/>
                                 <state key="normal" image="ball"/>
                                 <connections>
-                                    <action selector="ballTapped:" destination="84b-oF-hzo" eventType="touchUpInside" id="zIH-m8-TwV"/>
+                                    <outletCollection property="gestureRecognizers" destination="cFz-QB-9cE" appends="YES" id="PAd-Yj-SDh"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grass" translatesAutoresizingMaskIntoConstraints="NO" id="7Vd-Gb-lMH">
-                                <rect key="frame" x="0.0" y="596" width="414" height="300"/>
+                                <rect key="frame" x="0.0" y="436" width="414" height="300"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -439,6 +452,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FC2-dw-r1g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="cFz-QB-9cE">
+                    <connections>
+                        <action selector="handlePan:" destination="84b-oF-hzo" id="pmH-D6-VUH"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1730.4347826086957" y="290.625"/>
         </scene>
@@ -447,7 +465,7 @@
             <objects>
                 <navigationController id="QEO-dm-Ylc" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Byg-pB-qRY">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -463,7 +481,7 @@
             <objects>
                 <viewController id="P4D-4l-b8i" customClass="FAPopupController" customModule="DynamicAnimationsExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cnx-ga-Mnz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
@@ -478,4 +496,10 @@
         <image name="ball" width="100" height="100"/>
         <image name="grass" width="400" height="300"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="MnE-Ko-AqV"/>
+        <segue reference="oMO-9G-ds1"/>
+        <segue reference="9h3-2O-lFg"/>
+        <segue reference="7NC-8S-t8a"/>
+    </inferredMetricsTieBreakers>
 </document>

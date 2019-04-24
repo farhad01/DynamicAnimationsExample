@@ -20,7 +20,7 @@ class AttachmentViewController: UIViewController {
 
         
     }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         animation = UIDynamicAnimator(referenceView: view)
@@ -31,10 +31,8 @@ class AttachmentViewController: UIViewController {
             attachment.length = 100
             animation.addBehavior(attachment)
             
-            
-            
-            
         })
+        
         let item = UIDynamicItemBehavior(items: orbs)
         item.resistance = 0
         item.elasticity = 1

@@ -20,7 +20,15 @@ class FAPopupController: UIViewController {
     var push: UIPushBehavior!
     
     var isOpen: Bool = false
+    
+    var topPoint: CGPoint {
+        return CGPoint(x: 0, y: view.safeAreaInsets.top + topMargin)
+    }
 
+    var bottomPoint: CGPoint {
+        return CGPoint(x: 0, y: view.frame.height - collapsedHeight - view.layoutMargins.bottom)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -47,7 +55,7 @@ class FAPopupController: UIViewController {
         indicator.centerXAnchor.constraint(equalTo: containerView.centerXAnchor).isActive = true
         indicator.widthAnchor.constraint(equalToConstant: 40).isActive = true
         indicator.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        indicator.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 20).isActive = true
+        indicator.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 0).isActive = true
     }
     
     func setupGestureRecognizers() {
@@ -64,7 +72,7 @@ class FAPopupController: UIViewController {
         containerView.translatesAutoresizingMaskIntoConstraints = false
         containerView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         containerView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        containerView.bottomAnchor.constraint(equalTo: view.bottomAnchor,constant: view.frame.height - topMargin - collapsedHeight).isActive = true
+        containerView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor,constant: view.frame.height - topMargin - collapsedHeight).isActive = true
         containerView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 1, constant: -topMargin).isActive = true
         
         containerView.backgroundColor = UIColor.white
@@ -82,7 +90,7 @@ class FAPopupController: UIViewController {
         
         animation.addBehavior(item)
         
-        attachment = UIAttachmentBehavior(item: containerView, offsetFromCenter: UIOffset(horizontal: -(containerView.bounds.width / 2), vertical: -(containerView.bounds.height / 2)), attachedToAnchor: CGPoint(x: 0, y: view.frame.height - collapsedHeight))
+        attachment = UIAttachmentBehavior(item: containerView, offsetFromCenter: UIOffset(horizontal: -(containerView.bounds.width / 2), vertical: -(containerView.bounds.height / 2)), attachedToAnchor: bottomPoint)
         attachment.length = 0
         attachment.damping = 1
         attachment.frequency = 1.5
@@ -109,14 +117,14 @@ class FAPopupController: UIViewController {
             switch recognizer.state {
             case .changed:
                 push.magnitude = translation.y * 4
-                if translation.y > 200 {
+                if translation.y > 300 {
                     indicator.isStraight = true
                 } else {
                     indicator.isStraight = false
                 }
             case .ended:
                 push.magnitude = 0
-                if translation.y > 200 {
+                if translation.y > 300 {
                     close()
                 }
             default:
@@ -135,13 +143,13 @@ class FAPopupController: UIViewController {
     }
     
     func open() {
-        attachment.anchorPoint = CGPoint(x: 0, y: view.safeAreaInsets.top + topMargin)
+        attachment.anchorPoint = topPoint
         isOpen = true
         indicator.isStraight = false
     }
     
     func close() {
-        attachment.anchorPoint = CGPoint(x: 0, y: view.frame.height - collapsedHeight)
+        attachment.anchorPoint = bottomPoint
         isOpen = false
         indicator.isStraight = true
     }

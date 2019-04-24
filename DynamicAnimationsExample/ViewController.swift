@@ -26,11 +26,13 @@ class ViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        for (i,j) in unlocked.enumerated() {
-            cells[i].isUserInteractionEnabled = j
-            labels[i].isHidden = !j
+        if let value = ProcessInfo.processInfo.environment["code"], value == "1" {
+            for (i,j) in unlocked.enumerated() {
+                cells[i].isUserInteractionEnabled = j
+                labels[i].isHidden = !j
+            }
+            
         }
-        
     }
 
 

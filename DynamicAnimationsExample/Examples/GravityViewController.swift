@@ -9,37 +9,48 @@
 import UIKit
 
 class GravityViewController: UIViewController {
+    @IBOutlet var seg: UIStoryboardSegue!
     @IBOutlet var ball: UIButton!
-    var animator: UIDynamicAnimator!
+    var animation: UIDynamicAnimator!
     var gravity: UIGravityBehavior!
     var collision: UICollisionBehavior!
     var push: UIPushBehavior!
+    var item: UIDynamicItemBehavior!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        animator = UIDynamicAnimator(referenceView: view)
+        animation = UIDynamicAnimator(referenceView: view)
         
         collision = UICollisionBehavior(items: [ball])
         collision.translatesReferenceBoundsIntoBoundary = true
-        animator.addBehavior(collision)
+        
+        animation.addBehavior(collision)
         
         gravity = UIGravityBehavior(items: [ball])
-        animator.addBehavior(gravity)
-        // Do any additional setup after loading the view.
+        animation.addBehavior(gravity)
+        
+        item = UIDynamicItemBehavior(items: [ball])
+        item.elasticity = 0.4
+        animation.addBehavior(item)
+        
+        
+                // Do any additional setup after loading the view.
     }
     
 
-    @IBAction func ballTapped(_ sender: Any) {
-        if push != nil {
-            animator.removeBehavior(push)
+    @IBAction func handlePan(_ sender: UIPanGestureRecognizer) {
+        let translate = sender.translation(in: view)
+        if sender.state == .ended {
+            if push != nil {
+                animation.removeBehavior(push)
+            }
+            push = UIPushBehavior(items: [ball], mode: .instantaneous)
+            push.pushDirection = CGVector(dx: translate.x/5, dy: translate.y/5)
+            animation.addBehavior(push)
+            
         }
-        push = UIPushBehavior(items: [ball], mode: .instantaneous)
-        push.angle = (2...4).map({CGFloat($0 * 30) * .pi / 180}).randomElement() ?? CGFloat.pi / 2
-        push.magnitude = 90
-        
-        animator.addBehavior(push)
-        
     }
+
     /*
     // MARK: - Navigation
 

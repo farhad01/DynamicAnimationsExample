@@ -41,7 +41,7 @@ class CodeViewController: UIViewController {
             unlock(tag: 1)
         case "2341":
             unlock(tag: 2)
-        case "3423":
+        case "1235":
             unlock(tag: 3)
         default:
             return false
@@ -53,7 +53,11 @@ class CodeViewController: UIViewController {
         unlocked[tag] = true
     }
     @IBAction func codeTapped(_ sender: UIButton) {
-        code.append("\(sender.tag)")
+        appendCode(tag: sender.tag)
+    }
+    
+    func appendCode(tag: Int) {
+        code.append("\(tag)")
         if code.count == 4 {
             if validate() {
                 navigationController?.popViewController(animated: true)
@@ -64,10 +68,14 @@ class CodeViewController: UIViewController {
     }
     
     @IBAction func presenter(_ sender: Any) {
-        tapped += 1
-        if tapped == 10 {
+        if contaner.isHidden {
+            tapped += 1
+            if tapped == 10 {
             contaner.isHidden = false
-        }
+            }
+        } else {
+           appendCode(tag: 5)
+        } 
     }
     
 }
